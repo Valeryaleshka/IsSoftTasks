@@ -1,0 +1,144 @@
+body {
+  margin: 0;
+  min-width: 320px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #867388;
+}
+
+h1 {
+  color: white;
+}
+
+ul {
+  width: 50%;
+  min-width: 300px;
+  padding-inline-start: 0px;
+}
+
+li {
+  list-style-type: none;
+  cursor: pointer;
+}
+
+input {
+  border-width: 0;
+}
+input:focus {
+  outline: none;
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+}
+
+button {
+  cursor: pointer;
+}
+
+.list-item {
+  position: relative;
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: medium;
+  font-weight: 700;
+  color: black;
+  padding: 10px 10px 10px 50px;
+  border: 0px;
+  background: white;
+  animation: animateElement linear 0.3s;
+  height: auto;
+  max-height: 50px;
+  transition: all 1s;
+}
+
+.list-item-text {
+  margin: 0;
+  padding: 0;
+  word-break: break-all;
+  padding-right: 10px;
+}
+
+.list-item-text::before {
+  content: "\2713";
+  position: absolute;
+  left: 20px;
+  color: white;
+}
+
+.item-checked {
+  color: white;
+  background-color: rgba(0, 255, 34, 0.486);
+}
+
+.item-deleted {
+  transform: scaleY(0);
+  transition: 0.3s;
+}
+
+.item-cleared-space {
+  padding: 0;
+  margin: 0;
+  max-height: 0;
+}
+
+.delete-item {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  padding: 5px 20px;
+  outline: none;
+  border: 2px;
+  border-style: solid;
+  border-color: #fdbe33;
+  border-radius: 6px;
+  background: linear-gradient(#f3ae0f, #e38916) #e38916;
+  transition: 1s;
+}
+
+.delete-item:hover {
+  background: #f5ae00;
+  transition: 1s;
+}
+.delete-item:active {
+  background: #f59500;
+}
+
+.addNewItem {
+  padding: 10px;
+  width: 100px;
+  background: #d9d9d9;
+  color: rgb(39, 39, 39);
+  border: none;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.addNewItem:focus {
+  outline: none;
+}
+
+.addNewItem:active {
+  background: #bdbdbd;
+}
+
+#ToDoInput {
+  padding: 10px;
+}
+
+@keyframes animateElement {
+  0% {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
